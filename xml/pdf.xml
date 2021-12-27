@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<pdf>
+	<menu>
+		<title>Group E: Engine and Clutch</title><color>1</color>
+			<item><title>Engine Descrption</title><url>/pdf/Engine/E1.pdf</url></item>
+			<item><title>Removing and Installing Engine</title><url>/pdf/Engine/E5.pdf</url></item>
+			<item><title>Disassembling and Assembling Engine</title><url>/pdf/Engine/E7.pdf</url></item>
+			<item><title>Cooling System</title><url>/pdf/Engine/E15.pdf</url></item>
+			<item><title>Exhaust Systems and Heater</title><url>/pdf/Engine/E23.pdf</url></item>
+			<item><title>Oil System</title><url>/pdf/Engine/E29.pdf</url></item>
+			<item><title>Cylinder Head and Valves</title><url>/pdf/Engine/E37.pdf</url></item>
+			<item><title>Cylinders and Pistons</title><url>/pdf/Engine/E51.pdf</url></item>
+			<item><title>Crankcase</title><url>/pdf/Engine/E59.pdf</url></item>
+			<item><title>Crankshaft</title><url>/pdf/Engine/E77.pdf</url></item>
+			<item><title>Breaking-in Acceptance Standards</title><url>/pdf/Engine/E83.pdf</url></item>
+			<item><title>Clutch</title><url>/pdf/Engine/E91.pdf</url></item>
+			<item><title>Service Diagnosis</title><url>/pdf/Eng33ine/E103.pdf</url></item>
+			<item><title>Torque Values</title><url>/pdf/Engine/E105.pdf</url></item>
+			<item><title>Tolerances and Wear Limits</title><url>/pdf/Engine/E107.pdf</url></item>
+			<item><title>Special Tools</title><url>/pdf/Engine/E117.pdf</url></item>
+	</menu>
+	<menu>
+		<title>Group F: Fuel System</title><color>1</color>
+			<item><title>Descrption</title><url>/pdf/Fuel/F1.pdf</url></item>
+			<item><title>Carburetor Adjustment Data</title><url>/pdf/Fuel/F9.pdf</url></item>
+			<item><title>Carburetor</title><url>/pdf/Fuel/F11.pdf</url></item>
+			<item><title>Fuel Pump</title><url>/pdf/Fuel/F23.pdf</url></item>
+			<item><title>Fuel Tank</title><url>/pdf/Fuel/F31.pdf</url></item>
+			<item><title>Fuel Cock</title><url>/pdf/Fuel/F32.pdf</url></item>
+			<item><title>Special Tools</title><url>/pdf/Fuel/F35.pdf</url></item>
+	</menu>
+	<menu>
+		<title>Group S: Steering Gear and Front Axle</title><color>1</color>
+			<item><title>Description</title><url>/pdf/Steering/S1.pdf</url></item>
+			<item><title>Sectional View</title><url>/pdf/Steering/S3.pdf</url></item>
+			<item><title>Disassemble Front Axle and Brake Drum</title><url>/pdf/Steering/S5.pdf</url></item>
+			<item><title>Wheel Bearing</title><url>/pdf/Steering/S9.pdf</url></item>
+			<item><title>Wheel Suspension</title><url>/pdf/Steering/S13.pdf</url></item>
+			<item><title>Wheel Springing</title><url>/pdf/Steering/S21.pdf</url></item>
+			<item><title>Suspension Arm Bearing</title><url>/pdf/Steering/S27.pdf</url></item>
+			<item><title>Shock Absorber and Anti-Roll Bar</title><url>/pdf/Steering/S29.pdf</url></item>
+			<item><title>Steering</title><url>/pdf/Steering/S33.pdf</url></item>
+			<item><title>Steering Troubles</title><url>/pdf/Steering/S45.pdf</url></item>
+			<item><title>Special Tools</title><url>/pdf/Steering/S47.pdf</url></item>
+			<item><title>Tolerances and Wear Limits</title><url>/pdf/Steering/S51.pdf</url></item>
+	</menu>
+	<menu>
+		<title>Group R: Rear Axle and Transmission</title><color>1</color>
+			<item><title>Description</title><url>/pdf/RearAxle/R1.pdf</url></item>
+			<item><title>Axle Views</title><url>/pdf/RearAxle/R7.pdf</url></item>
+			<item><title>Transmission Ratio Charts</title><url>/pdf/RearAxle/R9.pdf</url></item>
+			<item><title>Removing and Disassembly</title><url>/pdf/RearAxle/R24.pdf</url></item>
+			<item><title>Rear Wheel Suspension</title><url>/pdf/RearAxle/R72.pdf</url></item>
+			<item><title>Tolerances</title><url>/pdf/RearAxle/R76.pdf</url></item>
+			<item><title>Torque Values</title><url>/pdf/RearAxle/R83.pdf</url></item>
+			<item><title>Special Tools</title><url>/pdf/RearAxle/R85.pdf</url></item>
+	</menu>
+	<menu>
+		<title>Group W: Wheel Alignment</title><color>1</color>
+			<item><title>General Information</title><url>/pdf/WheelAlignment/W1.pdf</url></item>
+			<item><title>Measuring Vehicle</title><url>/pdf/WheelAlignment/W5.pdf</url></item>
+			<item><title>Alignment of Wheels</title><url>/pdf/WheelAlignment/W15.pdf</url></item>
+	</menu>
+	<menu>
+		<title>Group T: Tires, Brakes and Wheels</title><color>1</color>
+			<item><title>Description</title><url>/pdf/TiresBrakes/T1.pdf</url></item>
+			<item><title>Master Cylinder</title><url>/pdf/TiresBrakes/T3.pdf</url></item>
+			<item><title>Wheel Brake Cylinder</title><url>/pdf/TiresBrakes/T9.pdf</url></item>
+			<item><title>Hydraulic System</title><url>/pdf/TiresBrakes/T13.pdf</url></item>
+			<item><title>Wheel Brake</title><url>/pdf/TiresBrakes/T15.pdf</url></item>
+			<item><title>Filling, Bleeding and Adjusting Brake</title><url>/pdf/TiresBrakes/T22.pdf</url></item>
+			<item><title>Wheels</title><url>/pdf/TiresBrakes/T29.pdf</url></item>
+			<item><title>Tires</title><url>/pdf/TiresBrakes/T31.pdf</url></item>
+			<item><title>Special Tools</title><url>/pdf/TiresBrakes/T39.pdf</url></item>
+			<item><title>Tolerances</title><url>/pdf/TiresBrakes/T45.pdf</url></item>
+	</menu>
+	<menu>
+		<title>Group B: Body</title><color>1</color>
+			<item><title>Index</title><url>/pdf/Body/B.pdf</url></item>
+			<item><title>Body COnstruction</title><url>/pdf/Body/B1.pdf</url></item>
+			<item><title>Front and Rear Hoods</title><url>/pdf/Body/B3.pdf</url></item>
+			<item><title>Bumpers</title><url>/pdf/Body/B10.pdf</url></item>
+			<item><title>Doors and Windows</title><url>/pdf/Body/B13.pdf</url></item>
+			<item><title>Seats</title><url>/pdf/Body/B33.pdf</url></item>
+			<item><title>Fittings</title><url>/pdf/Body/B35.pdf</url></item>
+			<item><title>Interior</title><url>/pdf/Body/B38.pdf</url></item>
+			<item><title>Pedal Assembly</title><url>/pdf/Body/B44.pdf</url></item>
+			<item><title>Cabriolet Convertible Top</title><url>/pdf/Body/B46.pdf</url></item>
+			<item><title>Roadster Top</title><url>/pdf/Body/B52.pdf</url></item>
+			<item><title>Repairs and Inspection</title><url>/pdf/Body/B56.pdf</url></item>
+			<item><title>Paint</title><url>/pdf/Body/B83.pdf</url></item>
+			<!-- <menu>
+				<title>356B Supplement</title>
+				<item><title>Index</title><url>/pdf/Supplement/SB.pdf</url></item>
+				<item><title>Electrically-operated sliding roof</title><url>/pdf/Supplement/Body/SB1.pdf</url></item>
+				<item><title>Ventilating plan</title><url>/pdf/Supplement/Body/SB9.pdf</url></item>
+			</menu> -->
+	</menu>
+	<menu>
+		<title>Group L: Lights and Electrical System</title><color>1</color>
+			<item><title>Index</title><url>/pdf/Electrical/L.pdf</url></item>
+			<item><title>Wiring Diagram</title><url>/pdf/Electrical/L1.pdf</url></item>
+			<item><title>Description of the Electrical System</title><url>/pdf/Electrical/L3.pdf</url></item>
+			<item><title>Instruments and Controls</title><url>/pdf/Electrical/L7.pdf</url></item>
+			<item><title>Fuses and Bulbs</title><url>/pdf/Electrical/L9.pdf</url></item>
+			<item><title>Generator</title><url>/pdf/Electrical/L11.pdf</url></item>
+			<item><title>Starter</title><url>/pdf/Electrical/L27.pdf</url></item>
+			<item><title>Battery</title><url>/pdf/Electrical/L39.pdf</url></item>
+			<item><title>Ignition System</title><url>/pdf/Electrical/L45.pdf</url></item>
+			<item><title>Lighting System</title><url>/pdf/Electrical/59L.pdf</url></item>
+			<item><title>Accessories</title><url>/pdf/Electrical/L71.pdf</url></item>
+			<item><title>Instruments</title><url>/pdf/Electrical/L77.pdf</url></item>
+			<item><title>Specifications</title><url>/pdf/Electrical/L85.pdf</url></item>
+	</menu>
+	<menu>
+		<title>Group M: Maintenace and Llubrication</title><color>1</color>
+			<item><title>Maintenance Plan</title><url>/pdf/Maintenance/MaintenancePlan.pdf</url></item>
+			<item><title>Lubrication Chart</title><url>/pdf/Maintenance/LubricationChart.pdf</url></item>
+			<item><title>Lubricant Volumes and Specifications</title><url>/pdf/Maintenance/LubricantSpecs.pdf</url></item>
+			<item><title>Special Tools</title><url>/pdf/Maintenance/SpecialTools.pdf</url></item>
+	</menu>
+	<menu>
+		<title>TD Technical Data</title><color>1</color>
+			<item><title>Technical Data</title><url>/pdf/TD/TD.pdf</url></item>
+	</menu>
+	<menu>
+		<title>TRA Technical Remarks, Accessories</title><color>1</color>
+		<item><title>Compensating Spring</title><url>/pdf/TRA/TRA1.pdf</url></item>
+		<item><title>Gear Shift Lock</title><url>/pdf/TRA/TRA5.pdf</url></item>
+		<item><title>Headrests</title><url>/pdf/TRA/TRA9.pdf</url></item>
+	</menu>
+	<menu>
+		<title>Suplement 356B T6 and 356C</title><color>1</color>
+		<menu>
+			<title>Group E: Engine and Clutch</title><color>-1</color>
+			<item><title>Index</title><url>/pdf/Supplement/Engine/SE.pdf</url></item>	
+			<menu>
+				<title>Descriptions</title>
+				<item><title>1600 S-90</title><url>/pdf/Supplement/Engine/SE1.pdf</url></item>
+				<item><title>1600S (616/12)</title><url>/pdf/Supplement/Engine/SE23.pdf</url></item>
+				<item><title>1600 C and 1600 SC Engines</title><url>/pdf/Supplement/Engine/SE43.pdf</url></item>
+			</menu>
+			<menu>
+				<title>Cooling Systems</title>
+				<item><title>Lower Air Channel with Dual Flaps</title><url>/pdf/Supplement/Engine/SE8.pdf</url></item>
+			</menu>
+			<menu>
+				<title>Exhaust System and Heater</title>
+				<item><title>Heating System for 356B T6</title><url>/pdf/Supplement/Engine/SE31.pdf</url></item>
+			</menu>
+			<menu>
+				<title>Oil System</title>
+				<item><title>Removing and Installing Centrifugal Valve</title><url>/pdf/Supplement/Engine/SE13.pdf</url></item>
+				<item><title>Ball Check Valve in Rocker Box Cover</title><url>/pdf/Supplement/Engine/SE14.pdf</url></item>
+			</menu>
+			<menu>
+				<title>Cylinder Head and Valves</title>
+				<item><title>356C Cylinder Head General</title><url>/pdf/Supplement/Engine/SE47.pdf</url></item>
+				<item><title>356C Head Recondiitoning and Exchange</title><url>/pdf/Supplement/Engine/SE48.pdf</url></item>
+				<item><title>Removing and Installing Valves</title><url>/pdf/Supplement/Engine/SE7.pdf</url></item>
+				<item><title>Adjusting Valve Clearances</title><url>/pdf/Supplement/Engine/SE11.pdf</url></item>
+				<item><title>356C Valve Clearance and Timing</title><url>/pdf/Supplement/Engine/SE48-2.pdf</url></item>
+			</menu>
+			<menu>
+				<title>Cylinders and Pistons</title>
+				<item><title>1600 S-90 Cylinder Specifications</title><url>/pdf/Supplement/Engine/SE9.pdf</url></item>
+				<item><title>Installing Piston Rings</title><url>/pdf/Supplement/Engine/SE10.pdf</url></item>
+				<item><title>Measuring points and Markings of Pistons</title><url>/pdf/Supplement/Engine/SE10-2.pdf</url></item>
+				<item><title>616/12 Cylinder and Piston Specifications</title><url>/pdf/Supplement/Engine/SE25.pdf</url></item>
+			</menu>
+			<menu>
+				<title>Crankshaft</title>
+				<item><title>General</title><url>/pdf/Supplement/Engine/SE5.pdf</url></item>
+				<item><title>Removing and installing Main Bearings</title><url>/pdf/Supplement/Engine/SE5-2.pdf</url></item>
+				<item><title>Adjusting End Play</title><url>/pdf/Supplement/Engine/SE6.pdf</url></item>
+				<item><title>356C Adjusting End Play</title><url>/pdf/Supplement/Engine/SE49.pdf</url></item>
+				<item><title>1600 S-90 Dimensions</title><url>/pdf/Supplement/Engine/SE15.pdf</url></item>
+				<item><title>356C 1600C and 1600SC Dimensions</title><url>/pdf/Supplement/Engine/SE50.pdf</url></item>
+				<item><title>Timming Gear Backlash</title><url>/pdf/Supplement/Engine/SE26.pdf</url></item>
+				<item><title>Connecting Rod Bearing Inserts</title><url>/pdf/Supplement/Engine/SE26-2.pdf</url></item>
+			</menu>
+
+			<item><title>Torque Values</title><url>/pdf/Supplement/Engine/SE17.pdf</url></item>
+			<item><title>1600 S-90 Performance Diagram</title><url>/pdf/Supplement/Engine/SE19.pdf</url></item>
+			<item><title>1600C Performance Diagram</title><url>/pdf/Supplement/Engine/SE56.pdf</url></item>
+			<item><title>1600SC Performance Diagram</title><url>/pdf/Supplement/Engine/SE57.pdf</url></item>
+			<item><title>Tolerances and Wear Limits</title><url>/pdf/Supplement/Engine/SE21.pdf</url></item>
+			<item><title>1600SC Tolerances and Wear Limits</title><url>/pdf/Supplement/Engine/SE52.pdf</url></item>
+			<item><title>1600C  Tolerances and Wear Limits</title><url>/pdf/Supplement/Engine/SE54.pdf</url></item>
+			<item><title>Adjusting Ignition Timing</title><url>/pdf/Supplement/Engine/SE12.pdf</url></item>
+			
+			<menu>
+				<title>Clutch</title>
+				<item><title>Diaphragm Clutch 1600 S-90</title><url>/pdf/Supplement/Engine/SE27.pdf</url></item>
+			</menu>								
+		</menu>
+		<menu>
+			<title>Group F: Fuel System</title><color>-1</color>
+			<item><title>Index</title><url>/pdf/Supplement/Fuel/SF.pdf</url></item>
+			<menu>
+				<title>Solex 40 PII-4 Carbureter</title>
+				<item><title>Description</title><url>/pdf/Supplement/Fuel/SF1.pdf</url></item>
+				<item><title>Specifications</title><url>/pdf/Supplement/Fuel/SF9.pdf</url></item>
+				<item><title>Removal and Installing</title><url>/pdf/Supplement/Fuel/SF11.pdf</url></item>
+				<item><title>Cleaning</title><url>/pdf/Supplement/Fuel/SF11-2.pdf</url></item>
+				<item><title>Disassembly and Assembly</title><url>/pdf/Supplement/Fuel/SF12.pdf</url></item>
+				<item><title>Idle Speed Adjustment</title><url>/pdf/Supplement/Fuel/SF13.pdf</url></item>
+				<item><title>Accelerating Pump Adjustment</title><url>/pdf/Supplement/Fuel/SF15.pdf</url></item>
+				<item><title>Float Level Check</title><url>/pdf/Supplement/Fuel/SF16.pdf</url></item>
+				<item><title>Air Cleaner Service</title><url>/pdf/Supplement/Fuel/SF17.pdf</url></item>
+				<item><title>Service Diagnosis</title><url>/pdf/Supplement/Fuel/SF19.pdf</url></item>
+			</menu>
+			<item><title>Fuel Tank</title><url>/pdf/Supplement/Fuel/FuelTank.pdf</url></item>
+			<item><title>Fuel Selector</title><url>/pdf/Supplement/Fuel/FuelSelector.pdf</url></item>
+			<item><title>Fuel Pump</title><url>/pdf/Supplement/Fuel/FuelPump.pdf</url></item>
+			<item><title>Carbureter Linkage</title><url>/pdf/Supplement/Fuel/CarbLinkage.pdf</url></item>
+			<item><title>356C Carb Adjustment</title><url>/pdf/Supplement/Fuel/356C_adjustment.pdf</url></item>		
+			<item><title>Special Tools</title><url>/pdf/Supplement/Fuel/SpecialTools.pdf</url></item>		
+		</menu>
+		<menu>
+			<title>Group R: Rear Axle and Transmission</title><color>-1</color>
+			<item><title>Index</title><url>/pdf/Supplement/RearAxle/SR.pdf</url></item>
+			<menu>
+				<title>Transmission 741 changes from SN 35 001</title>
+				<item><title>Front Suspension</title><url>/pdf/Supplement/RearAxle/SR1.pdf</url></item>
+				<item><title>Section View</title><url>/pdf/Supplement/RearAxle/SR3.pdf</url></item>
+				<item><title>Section View from SN 50 001</title><url>/pdf/Supplement/RearAxle/SR17.pdf</url></item>
+			</menu>
+			<menu>
+				<title>Gear Box Special Gear Combinations</title><color>-1</color>
+				<item><title>Converting Pinion Shaft</title><url>/pdf/Supplement/RearAxle/SR5.pdf</url></item>
+				<item><title>Converting Main Shaft</title><url>/pdf/Supplement/RearAxle/SR6.pdf</url></item>
+				<item><title>Special Gear Ratio for Hill Climbs</title><url>/pdf/Supplement/RearAxle/SR7.pdf</url></item>
+				<item><title>Special Gear Ratio for Nurburgring</title><url>/pdf/Supplement/RearAxle/SR9.pdf</url></item>
+				<item><title>Transmission Gear Ratios</title><url>/pdf/Supplement/RearAxle/SR19.pdf</url></item>
+				<item><title>741 Transmission Changes from 50 001</title><url>/pdf/Supplement/RearAxle/SR11.pdf</url></item>
+				<item><title>741 Transmission Changes from 50 017</title><url>/pdf/Supplement/RearAxle/SR12.pdf</url></item>
+				<item><title>Servo-Thrust Synchronization changes from 50 001</title><url>/pdf/Supplement/RearAxle/SR13.pdf</url></item>
+				<item><title>Interchangeability of Input Shafts</title><url>/pdf/Supplement/RearAxle/SR16.pdf</url></item>
+			</menu>
+			<menu>
+				<title>Gear Axle Drive</title><color>-1</color>
+				<item><title>ZF Limited Slip Standard</title><url>/pdf/Supplement/RearAxle/SR27.pdf</url></item>
+			</menu>
+		</menu>
+		<menu>
+			<title>Group T:  Tires, Brakes, and Wheels</title><color>-1</color>
+			<item><title>Index</title><url>/pdf/Supplement/TiresBrakes/ST.pdf</url></item>
+			<menu>
+				<title>Descriptions</title>
+				<item><title>356B Disc Brake Description</title><url>/pdf/Supplement/TiresBrakes/ST1.pdf</url></item>
+				<item><title>356C Disc Brake Description</title><url>/pdf/Supplement/TiresBrakes/ST15.pdf</url></item>
+				<item><title>356C cross-sectional view Rear Wheel</title><url>/pdf/Supplement/TiresBrakes/ST19.pdf</url></item>
+				<item><title>356C cross-sectional view Hand Brake</title><url>/pdf/Supplement/TiresBrakes/ST20.pdf</url></item>
+			</menu>
+			<menu>
+				<title>Brake Master Cylinder</title>
+				<item><title>356B Description</title><url>/pdf/Supplement/TiresBrakes/ST2.pdf</url></item>
+				<item><title>356C Description</title><url>/pdf/Supplement/TiresBrakes/ST17.pdf</url></item>
+			</menu>
+			<menu>
+				<title>Brake Calipers and Cylinders</title>
+				<item><title>356B Description and Automatic Adjustment</title><url>/pdf/Supplement/TiresBrakes/ST3.pdf</url></item>
+				<item><title>356C Description and Automatic Adjustment</title><url>/pdf/Supplement/TiresBrakes/ST17.pdf</url></item>
+			</menu>
+			<menu>
+				<title>Brake Disc</title>
+				<item><title>356B Description</title><url>/pdf/Supplement/TiresBrakes/ST3.pdf</url></item>
+				<item><title>356C Description</title><url>/pdf/Supplement/TiresBrakes/ST18.pdf</url></item>
+			</menu>
+			<menu>
+				<title>Hand Brake</title>
+				<item><title>356B Description</title><url>/pdf/Supplement/TiresBrakes/ST4.pdf</url></item>
+				<item><title>356C Description</title><url>/pdf/Supplement/TiresBrakes/ST18.pdf</url></item>
+			</menu>
+			<menu>
+				<title>Bleeding Brakes</title>
+				<item><title>356B Bleeding Brakes</title><url>/pdf/Supplement/TiresBrakes/ST4.pdf</url></item>
+				<item><title>356C Bleeding Brakes</title><url>/pdf/Supplement/TiresBrakes/ST21.pdf</url></item>
+			</menu>
+			<item><title>Replacing Brake Pads</title><url>/pdf/Supplement/TiresBrakes/ST22.pdf</url></item>
+			<item><title>Remove and Install Disk Brakes</title><url>/pdf/Supplement/TiresBrakes/ST24.pdf</url></item>
+			<item><title>Remove and Install Front Wheel Bearings</title><url>/pdf/Supplement/TiresBrakes/ST26.pdf</url></item>
+			<item><title>Remove and Install Oil Deflector at Rear Wheel Hub</title><url>/pdf/Supplement/TiresBrakes/ST28.pdf</url></item>
+			<item><title>356C Rear Brakes Remove and Install</title><url>/pdf/Supplement/TiresBrakes/ST29.pdf</url></item>
+			<item><title>356C Adjust Hand Brake</title><url>/pdf/Supplement/TiresBrakes/ST32.pdf</url></item>
+			<item><title>356C Disc Shrouds</title><url>/pdf/Supplement/TiresBrakes/ST33.pdf</url></item>
+			<item><title>356C Caliper Pistons</title><url>/pdf/Supplement/TiresBrakes/ST34.pdf</url></item>
+		</menu>
+		<menu>
+			<title>Group B: Body</title><color>-1</color>
+			<item><title>Index</title><url>/pdf/Supplement/Body/SB.pdf</url></item>
+			<item><title>Electronically-operated sliding roof</title><url>/pdf/Supplement/Body/SB1.pdf</url></item>
+			<item><title>Ventilating Plant</title><url>/pdf/Supplement/Body/SB9.pdf</url></item>
+			<item><title>356C Body Diagrams</title><url>/pdf/Supplement/Body/356C_diagrams.pdf</url></item>
+		</menu>
+		<menu>
+			<title>Group L: Lights and Electrical</title><color>-1</color>
+			<item><title>Index</title><url>/pdf/Supplement/Electrical/SL.pdf</url></item>
+			<item><title>Windshield wiper assembly</title><url>/pdf/Supplement/Electrical/SL1.pdf</url></item>
+			<item><title>356B Wiring Diagram</title><url>/pdf/Supplement/Electrical/SL3.pdf</url></item>
+			<item><title>356C Wiring Diagram</title><url>/pdf/Supplement/Electrical/SL5.pdf</url></item>
+		</menu>
+		<item><title>Group M: Maintenance</title><url>/pdf/Supplement/Maintenance/SM1.pdf</url></item>
+		<item><title>Group TD: 356C Technical Data</title><url>/pdf/Supplement/TD/TD1.pdf</url></item>
+		<menu>
+			<title>Group TRA Technical Remarks, Accessories</title><color>-1</color>
+			<item><title>Windshield wiper assembly</title><url>/pdf/Supplement/TRA/STRA1.pdf</url></item>
+			<item><title>Loudspeakers 356A and 356B</title><url>/pdf/Supplement/TRA/STRA3.pdf</url></item>
+			<item><title>Seatbelts</title><url>/pdf/Supplement/TRA/STRA19.pdf</url></item>
+			<item><title>BN4 Heater part 1</title><url>/pdf/Supplement/TRA/STRA5.pdf</url></item>
+			<item><title>BN4 Heater part 2</title><url>/pdf/Supplement/TRA/STRA27.pdf</url></item>
+			<item><title>Outside Thermometer</title><url>/pdf/Supplement/TRA/STRA49.pdf</url></item>
+			<item><title>Trailer Hitch</title><url>/pdf/Supplement/TRA/STRA52.pdf</url></item>
+		</menu>
+	</menu>
+	<item><title>Part Numbers</title><url>/pdf/PartNumbers/E_356_65_KATALOG.pdf</url></item>
+	<item><title>Exploded Views 356B</title><url>/pdf/ExplodedView/356B_all.pdf</url></item>
+</pdf>
