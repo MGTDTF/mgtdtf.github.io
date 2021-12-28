@@ -48,11 +48,12 @@ body.main {
 
 body.bg01 {
   background-color:#ffffff;
-  background-image: linear-gradient(to right,white 100%,grey 0%),url(/images/porsche-356.gif);
+  background-image: url(/images/MG_TF1500.gif);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 40% auto;
-  background-blend-mode: darken;
+  background-blend-mode: dark;
+  background-position:right top;
 }
 
 td.sepa {
