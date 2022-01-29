@@ -35,12 +35,6 @@ def closeOutput(file, content):
         dst.write(content)
         dst.close()
 
-def add_url(sitemap, element):
-    url = element[1].text
-    sitemap += sitemap_page.format(url, date)
-    ret
-
-
 def crawl_tree(elements):
     sitemap = ""
     for element in elements:
@@ -58,7 +52,7 @@ def write_file(file, content):
 
 if __name__== "__main__":
     sourcefile = "./xml/pdf.xml"
-    outfile = "sitemap.xml"
+    outfile = "./sitemap.xml"
 
     initOutput(outfile, sitemap_header)
 
@@ -66,7 +60,6 @@ if __name__== "__main__":
     root = tree.getroot()
     elements = list(root)
     bodyData = crawl_tree(elements)
-    print(bodyData)
     write_file(outfile, bodyData)
-   
+
     closeOutput(outfile, sitemap_footer)
