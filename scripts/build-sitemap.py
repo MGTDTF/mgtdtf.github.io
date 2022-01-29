@@ -8,7 +8,6 @@ import xml.etree.ElementTree as ET
 import datetime
 date = datetime.datetime.now().date()
 
-
 sitemap_header = '''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 '''
@@ -35,15 +34,16 @@ def closeOutput(file, content):
         dst.write(content)
         dst.close()
 
-def crawl_tree(elements):
-    sitemap = ""
+def crawl_tree(outfile, elements):
     for element in elements:
-        if element.tag == 'menu': 
-            crawl_tree(element)
+        if element.tag != 'item': 
+            crawl_tree(outfile, element)
         elif element.tag == 'item':
             url = element[1].text
-            sitemap += sitemap_page.format(url, date)
-    return(sitemap)
+            f = open(outfile, "a");
+            f.write(sitemap_page.format(url, date))
+            f.close()
+
     
 def write_file(file, content):
     with open(file, "a") as dst:
@@ -51,6 +51,7 @@ def write_file(file, content):
         dst.close()
 
 if __name__== "__main__":
+    bodyData = ""
     sourcefile = "./xml/pdf.xml"
     outfile = "./sitemap.xml"
 
@@ -59,7 +60,6 @@ if __name__== "__main__":
     tree = ET.parse(sourcefile)
     root = tree.getroot()
     elements = list(root)
-    bodyData = crawl_tree(elements)
-    write_file(outfile, bodyData)
+    crawl_tree(outfile, elements)
 
     closeOutput(outfile, sitemap_footer)
