@@ -24,11 +24,11 @@
   <meta http-equiv="Pragma" content="no-cache">
 
   <link rel=stylesheet href="/styles/main.css">
-  <!-- <link rel=stylesheet href="/styles/menu.css"> -->
-  <!-- <link rel=stylesheet href="/styles/pdf.css"> -->
+  <link rel=stylesheet href="/styles/_menu.css">
+  <link rel=stylesheet href="/styles/_pdf.css">
   <script src="/scripts/xml.js"></script>
-  <!-- <script src="/scripts/pdf.js"></script> -->
-  <!-- <script src="/scripts/menu.js"></script> -->
+  <script src="/scripts/_pdf.js"></script>
+  <script src="/scripts/_menu.js"></script>
 
 </head>
 
@@ -38,16 +38,17 @@
       <iframe src="/components/menu_top.html" style="grid-area:menuTop" scrolling="no"></iframe>
       <iframe name="menu_tree" id="menu_tree" src="/components/menu_tree.html" style="grid-area:menuTree"></iframe> 
       <iframe name="menu_search" id="menu_search" src="/components/menu_search.html" style="grid-area:menuSearch"></iframe>  
-      <!-- <div id="menuTop"></div>
-      <div id="menu_tree" style="grid-area:menuTree"></div>
-      <div id="menuSearch"></div> -->
+      <!-- <div id="menuTop" style="grid-area:menuTop"></div> -->
+      <!-- <div id="menu_tree" style="grid-area:menuTree"></div> -->
+      <!-- <div id="menuSearch" style="grid-area:menuSearch"></div> -->
     </div>
     <div id="content">
       <iframe src="/components/top.html" style="grid-area:pdfTop"></iframe>
       <iframe name="pdf" id="pdf" src="/components/pdf.html" style="grid-area:pdf"></iframe>
       <iframe name="frameopen" id="frameopen" src="/components/frameopen.html" style="display:none"></iframe>
+      <!-- <div id="pdfTop" style="grid-area:pdfTop"></div> -->
       <!-- <div id="pdfContent" style="grid-area:pdf;"></div> -->
-      <!-- <iframe name="frameopen" id="frameopen" src="/components/frameopen.html" style="display:none"></iframe> -->
+      <!-- <div id="pdfBottom" style="display:none"></div> -->
     </div>
   </div>
 </body>
