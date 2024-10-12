@@ -2,10 +2,10 @@
 <pdf>
 		<menu>
 			<title>General Data</title><color>1</color>
-			<item><title>Series TD - Data</title><url>/pdf/_General/G4.pdf</url></item>
-			<item><title>Series TD - Information</title><url>/pdf/_General/G8.pdf</url></item>
-			<item><title>Series TF - Data</title><url>/pdf/_General/G19.pdf</url></item>
-			<item><title>Series TF - Information</title><url>/pdf/_General/G23.pdf</url></item>
+			<item><title>Series TD - Data</title><url>/pdf/General/G4.pdf</url></item>
+			<item><title>Series TD - Information</title><url>/pdf/General/G8.pdf</url></item>
+			<item><title>Series TF - Data</title><url>/pdf/General/G19.pdf</url></item>
+			<item><title>Series TF - Information</title><url>/pdf/General/G23.pdf</url></item>
 		</menu>
 		<item><title>Engine</title><url>/pdf/A_Engine/A.pdf</url></item>
 		<item><title>Fuel System</title><url>/pdf/B_Fuel/B.pdf</url></item>
