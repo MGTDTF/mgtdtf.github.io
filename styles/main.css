@@ -20,7 +20,6 @@ html, body {
     height: 100%;
     box-sizing: border-box;
 
-    display: grid;
     grid-template-rows: 33px auto 33px;
 
     grid-template-areas:
@@ -43,12 +42,33 @@ html, body {
         "pdf";
 }
 
+/* mobile first design.  Start to tree frame closed */
+#nav { display: none; }
+#content { grid-column: 1/ span 2; }
+#pdf { grid-row: 2 / span 1 ; }
+#frameopen { display: block; }
+
+@media (min-width: 768px) {
+    /* display the menu tree on larger screens */
+    #nav { display: grid; }
+    #content { grid-column: 2 / span 1; }
+    #pdf { grid-area: pdf; }
+    #frameopen {display: none; }
+}
+
+
+
 .homepage {
-    width: 50%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     margin: 20px;
     /* padding: 10px; */
 }
+
+@media (min-width: 768px) {
+    .homepage { width: 50%; }
+}
+
 
 
 .popupContainer {

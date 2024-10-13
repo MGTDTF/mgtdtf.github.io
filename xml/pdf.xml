@@ -7,28 +7,28 @@
 			<item><title>Series TF - Data</title><url>/pdf/General/G19.pdf</url></item>
 			<item><title>Series TF - Information</title><url>/pdf/General/G23.pdf</url></item>
 		</menu>
-		<item><title>A Engine</title><url>/pdf/A_Engine/A.pdf</url></item>
-		<item><title>B Fuel System</title><url>/pdf/B_Fuel/B.pdf</url></item>
-		<item><title>C Ignition Equipment</title><url>/pdf/C_Ignition/C.pdf</url></item>
+		<item><title>A - Engine</title><url>/pdf/A_Engine/A.pdf</url></item>
+		<item><title>B - Fuel System</title><url>/pdf/B_Fuel/B.pdf</url></item>
+		<item><title>C - Ignition Equipment</title><url>/pdf/C_Ignition/C.pdf</url></item>
 
 		<menu>
-			<title>D Cooling</title><color>1</color>
+			<title>D - Cooling</title><color>1</color>
 			<item><title>Series TD</title><url>/pdf/D_Cooling/D.pdf</url></item>
 			<item><title>Series TF</title><url>/pdf/D_Cooling/DD.pdf</url></item>
 		</menu>
-		<item><title>E Flywheel and Clutch</title><url>/pdf/E_Clutch/E.pdf</url></item>
-		<item><title>F Gearbox</title><url>/pdf/F_Gearbox/F.pdf</url></item>
-		<item><title>G Propellor Shaft</title><url>/pdf/G_PropellerShaft/G.pdf</url></item>
-		<item><title>H Rear Axle</title><url>/pdf/H_RearAxle/H.pdf</url></item>
-		<item><title>I Rear Road Springs</title><url>/pdf/I_RearSprings/I.pdf</url></item>
-		<item><title>J Steering Gear</title><url>/pdf/J_Steering/J.pdf</url></item>
-		<item><title>K Front Suspension</title><url>/pdf/K_FrontSuspension/K.pdf</url></item>
-		<item><title>L Hydraulic Dampers</title><url>/pdf/L_Dampers/L.pdf</url></item>
-		<item><title>M Braking Systems</title><url>/pdf/M_Brakes/M.pdf</url></item>
-		<item><title>N Electrical Equipment</title><url>/pdf/N_Electrical/N.pdf</url></item>
-		<item><title>O Wheels and Tyres</title><url>/pdf/O_Wheels/O.pdf</url></item>
-		<item><title>P Lubrications</title><url>/pdf/P_Lubrication/P.pdf</url></item>
-		<item><title>Q Special Tools</title><url>/pdf/Q_SpecialTools/Q.pdf</url></item>
-		<item><title>R Body</title><url>/pdf/R_Body/R.pdf</url></item>
-		<item><title>S Chassis Frame Repairs</title><url>/pdf/S_Chassis/S.pdf</url></item>
+		<item><title>E - Flywheel and Clutch</title><url>/pdf/E_Clutch/E.pdf</url></item>
+		<item><title>F - Gearbox</title><url>/pdf/F_Gearbox/F.pdf</url></item>
+		<item><title>G - Propellor Shaft</title><url>/pdf/G_PropellerShaft/G.pdf</url></item>
+		<item><title>H - Rear Axle</title><url>/pdf/H_RearAxle/H.pdf</url></item>
+		<item><title>I - Rear Road Springs</title><url>/pdf/I_RearSprings/I.pdf</url></item>
+		<item><title>J - Steering Gear</title><url>/pdf/J_Steering/J.pdf</url></item>
+		<item><title>K - Front Suspension</title><url>/pdf/K_FrontSuspension/K.pdf</url></item>
+		<item><title>L - Hydraulic Dampers</title><url>/pdf/L_Dampers/L.pdf</url></item>
+		<item><title>M - Braking Systems</title><url>/pdf/M_Brakes/M.pdf</url></item>
+		<item><title>N - Electrical Equipment</title><url>/pdf/N_Electrical/N.pdf</url></item>
+		<item><title>O - Wheels and Tyres</title><url>/pdf/O_Wheels/O.pdf</url></item>
+		<item><title>P - Lubrications</title><url>/pdf/P_Lubrication/P.pdf</url></item>
+		<item><title>Q - Special Tools</title><url>/pdf/Q_SpecialTools/Q.pdf</url></item>
+		<item><title>R - Body</title><url>/pdf/R_Body/R.pdf</url></item>
+		<item><title>S - Chassis Frame Repairs</title><url>/pdf/S_Chassis/S.pdf</url></item>
 </pdf>

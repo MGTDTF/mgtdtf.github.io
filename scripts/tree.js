@@ -47,47 +47,6 @@ async function init() {
       console.log("error: ", err);
   }
 }
-
-// async function init(){
-//     id=0;
-//     linkid=0;
-//     openFlag=new Array;
-//     ColorFlag=new Array;
-//     gNoArray=new Array;
-//     pImg=new Array("/images/plas1.gif","/images/plas2.gif");
-//     mImg=new Array("/images/minas1.gif","/images/minas2.gif");
-  
-//     fImg=new Array("/images/close_g.gif","/images/open_g.gif",
-//                    "/images/close_y.gif","/images/open_y.gif",
-//                    "/images/close_r.gif","/images/open_r.gif",
-//                    "/images/close_p.gif","/images/open_p.gif",
-//                    "/images/close_b.gif","/images/open_b.gif",
-//                    "/images/close_lb.gif","/images/open_lb.gif");
-  
-//     dImg=new Array("/images/tg3.gif","/images/tg4.gif");
-//     rImg=new Array("/images/tg1.gif","/images/tg2.gif");
-    
-//     document.write("<span class='TopItem' onclick='AllClose()'><font style='font-size:11pt;'>");
-//     document.write("<p id='Ttree'></p><br>");
-//     document.write("</font></span><br>"); 
-    
-//     document.write("<p id='Ttree2'></p>");
-  
-//     GetModelName("Ttree");
-  
-//     var xmlFile="/xml/pdf.xml";
-//     let xmlDoc = await loadXML(xmlFile);
-//     HomePath="";
-//     try {
-//       xmlDoc = xmlDoc.getElementsByTagName("pdf");
-//       xmlDoc = xmlDoc[0];
-//       document.getElementById("Ttree2").innerHTML = ParseTree(xmlDoc,"");
-//       return;
-//     } catch (err) {
-//       console.log("error: ", err);
-//     }
-    
-//   }
     
 function ParseTree(poNode, PsTree) {
   var gNo;

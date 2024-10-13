@@ -294,4 +294,31 @@ font.treedata {
 img.treeimg {
   border-style:solid;
   border-width:0;
+  width: 13px;
+  height: 13px;
 }
+
+/* Mobile first: hide the menu initially */
+#Ttree2, #Ttree {
+  /* display: none; */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: block;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Show the menu on larger screens */
+@media (min-width: 768px) {
+  #Ttree2, #Ttree {
+    display: block;
+  }
+
+  .hamburger {
+    display: none; /* Hide hamburger icon on larger screens */
+  }
+}
+
