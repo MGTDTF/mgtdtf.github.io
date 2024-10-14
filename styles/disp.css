@@ -105,3 +105,4 @@ font.wait{
   font-size: large;
 }
 
+#pdf > img { width: 100%; }
