@@ -105,10 +105,10 @@ font.wait{
   font-size: large;
 }
 
-#pdf > img { width: 100%; }
+/* #pdf > img { width: 100%; }
 
 .pdf {
-  width: 100%; /* Ensure this is set correctly */
-  max-width: 100%; /* Prevent overflow */
+  width: 100%; 
+  max-width: 100%; 
   overflow-x: hidden;
-}
+} */
