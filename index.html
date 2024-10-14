@@ -5,6 +5,8 @@
   <title id="title">MG TD/TF Workshop Manual</title>
   <meta name="description" content="MG TD TF Workshop Manual">
   <link rel="canonical" href="https://mgtdtf.github.io/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
   <!-- Define the site name for google search -->
   <script type="application/ld+json">
@@ -27,6 +29,8 @@
   <!-- <link rel=stylesheet href="/styles/_menu.css">
   <link rel=stylesheet href="/styles/_pdf.css"> -->
   <script src="/scripts/xml.js"></script>
+  <script src="/scripts/button.js"></script>
+  <script src="/scripts/index.js"></script>
   <!-- <script src="/scripts/_pdf.js"></script>
   <script src="/scripts/_menu.js"></script> -->
 
@@ -34,28 +38,39 @@
 
 <body>
   <div class="container" id="mainContainer">
+    <div class="content-header">
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <img id="reloadImage" src="/images/MG_safetyfast.png" alt="Safety Fast">
+    </div>
+    <div class="content-wrapper">
+      <div id="nav">
+        <iframe name="menu_tree" id="menu_tree" src="/components/menu_tree.html"></iframe> 
+      </div>
+      <div id="content">
+        <iframe name="pdf" id="pdf" src="/components/pdf.html"></iframe>
+      </div>
+    </div>
+  </div>
 
-
-    <div id="nav">
-      <iframe src="/components/menu_top.html" style="grid-area:menuTop" scrolling="no"></iframe>
-      <iframe name="menu_tree" id="menu_tree" src="/components/menu_tree.html" style="grid-area:menuTree"></iframe> 
-      <iframe name="menu_search" id="menu_search" src="/components/menu_search.html" style="grid-area:menuSearch"></iframe>  
+    <!-- <div id="nav"> -->
+      <!-- <iframe src="/components/menu_top.html" style="grid-area:menuTop" scrolling="no"></iframe> -->
+      <!-- <iframe name="menu_tree" id="menu_tree" src="/components/menu_tree.html" style="grid-area:menuTree"></iframe>  -->
+      <!-- <iframe name="menu_search" id="menu_search" src="/components/menu_search.html" style="grid-area:menuSearch"></iframe>   -->
       <!-- <div id="menuTop" style="grid-area:menuTop"></div> -->
       <!-- <div id="menu_tree" style="grid-area:menuTree"></div> -->
       <!-- <div id="menuSearch" style="grid-area:menuSearch"></div> -->
-    </div>
+    <!-- </div> -->
 
-    <div id="content">
-      <iframe src="/components/top.html" style="grid-area:pdfTop"></iframe>
+    <!-- <div id="content"> -->
+      <!-- <iframe src="/components/top.html" style="grid-area:pdfTop"></iframe> -->
       <!-- <iframe name="pdf" id="pdf" src="/components/pdf.html" style="grid-area:pdf"></iframe> -->
       <!-- <iframe name="frameopen" id="frameopen" src="/components/frameopen.html" style="display:none"></iframe> -->
-      <iframe name="pdf" id="pdf" src="/components/pdf.html"></iframe>
-      <iframe name="frameopen" id="frameopen" src="/components/frameopen.html"></iframe>
+      <!-- <iframe name="frameopen" id="frameopen" src="/components/frameopen.html"></iframe> -->
       <!-- <div id="pdfTop" style="grid-area:pdfTop"></div> -->
       <!-- <div id="pdfContent" style="grid-area:pdf;"></div> -->
       <!-- <div id="pdfBottom" style="display:none"></div> -->
-    </div>
+    <!-- </div> -->
 
-  </div>
+  <!-- </div> -->
 </body>
 </html>

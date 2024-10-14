@@ -39,30 +39,6 @@ body.header {
   align-content: center;
 }
 
-/* Mobile first: hide the menu initially */
-#Ttree2, #Ttree {
-  display: none;
-}
-
-/* Hamburger menu styles */
-.hamburger {
-  display: block;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 0px;
-}
-
-/* Show the menu on larger screens */
-@media (min-width: 768px) {
-  #Ttree2, #Ttree {
-    display: block;
-  }
-
-  .hamburger {
-    display: none; /* Hide hamburger icon on larger screens */
-  }
-}
-
 body.main {
   width:100%;
   margin-left:6px;
@@ -73,17 +49,6 @@ body.main {
 
 body.bg01 {
   background-color:#ffffff;
-}
-
-@media (min-width: 768px) {
-  body.bg01 {
-    background-image: url(/images/MG_TF1500.gif); 
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 40% auto;
-    background-blend-mode: dark;
-    background-position:right top;
-  }
 }
 
 td.sepa {
@@ -139,3 +104,4 @@ font.wait{
   font-family:Arial;
   font-size: large;
 }
+

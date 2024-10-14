@@ -1,3 +1,5 @@
+
+
 async function init() {
   id = 0;
   linkid = 0;
@@ -46,6 +48,32 @@ async function init() {
   } catch (err) {
       console.log("error: ", err);
   }
+
+  // add listeners to close menu after selecting page
+  attachMenuItemListeners();
+
+  // start with the menu frame closed on small/mobile screens
+  if (window.top.innerWidth < 768) {
+    frameclose();
+  } else {
+    frameopen();
+  }
+
+
+}
+
+
+function attachMenuItemListeners() {
+  console.debug("attaching menu listeners");
+  // Delegate event listener to nav
+  document.getElementById('Ttree2').addEventListener('click', function(event) {
+    if (event.target && event.target.tagName === 'A') {
+      if (window.top.innerWidth < 768) {
+        console.debug("click event");
+        frameclose();
+      }
+    }
+  });
 }
     
 function ParseTree(poNode, PsTree) {

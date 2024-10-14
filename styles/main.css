@@ -1,62 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     height: 100%;
     width: 100%;
 }
 
 .container {
-    width: 100vw;
+    display: flex;
+    flex-direction: column; /* Stack header on top of the iframes */
+    height: 100vh; /* Full height */
+    /* width: 100vw;
     height: 100vh;
-    box-sizing: border-box;
 
-    display: grid;
-    grid-template-columns: 300px auto;
+    /* display: grid;
+    grid-template-columns: 300px auto; */
+}
+
+/* Header stays at the top with full width */
+.content-header {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    column-gap: 30px;
+    padding: 5px;
+    width: 100%;
+    height: 50px;
+    background-color: #f0f0f0;
+}
+
+.content-header > img { cursor: pointer; }
+
+/* Wrapper for nav and content to position them side by side */
+.content-wrapper {
+  display: flex;
+  flex: 1; /* Makes the wrapper take up remaining space below the header */
 }
 
 #nav {
-    width: 100%;
+    max-width: 220px;
+    /* width: 100%; */
     height: 100%;
-    box-sizing: border-box;
-
-    grid-template-rows: 33px auto 33px;
+/* 
+    grid-template-rows: 33px auto;
 
     grid-template-areas:
         "menuTop"
-        "menuTree"
-        "menuSearch";
+        "menuTree"; */
+        /* "menuSearch"; */
 }
 
 #content {
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
-
+/* 
     display: grid;
-    grid-template-rows: 33px auto 33px;
+    grid-template-rows: 33px auto;
 
     grid-template-areas:
         "pdfTop"
-        "pdf"
-        "pdf";
+        "pdf"; */
 }
 
-/* mobile first design.  Start to tree frame closed */
-#nav { display: none; }
-#content { grid-column: 1/ span 2; }
-#pdf { grid-row: 2 / span 1 ; }
-#frameopen { display: block; }
+/* #frameopen { display: none; }; */
+/* allows javascript to toggle menu display */
+
+#nav.closed { display: none; }
+/* #content.full-width { grid-column: 1 / span 2; } */
+/* #pdf.full-width { grid-row: 2 / span 1; } */
+/* #frameopen.full-width { display: block; }; */
+
+/* set the default to mobile with hamburger menu */
+/* #nav { display: none; } */
+/* #content { grid-column: 1 / span 2; } */
+/* #pdf { grid-row: 2 / span 1; } */
+/* #frameopen { display: block; } */
 
 @media (min-width: 768px) {
-    /* display the menu tree on larger screens */
-    #nav { display: grid; }
-    #content { grid-column: 2 / span 1; }
-    #pdf { grid-area: pdf; }
-    #frameopen {display: none; }
+    /* display the menu tree on larger screens. same as frameopen() */
+    #nav {display: inline-block; }
+
+    /* #nav { display: grid; } */
+    /* #content { grid-column: 2 / span 1; } */
+    /* #pdf { grid-area: pdf; } */
+    /* #frameopen { display: none; } */
 }
 
+/* Hamburger menu styles */
+.hamburger {
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+    align-content: center;
+}
 
+@media (max-width: 767px) {
+    #nav { display: inline-block; };
+}
 
 .homepage {
     /* width: 100%;
@@ -67,14 +111,20 @@ html, body {
 
 @media (min-width: 768px) {
     .homepage { width: 50%; }
+    body.bg01 {
+        background-image: url(/images/MG_TF1500.gif); 
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 40% auto;
+        background-blend-mode: dark;
+        background-position:right top;
+      }
 }
-
 
 
 .popupContainer {
     width: 100vw;
     height: 100vh;
-    box-sizing: border-box;
 
     display: grid;
     grid-template-columns: 300px auto;
@@ -97,7 +147,7 @@ iframe {
     border-width: 0px;
     outline: none;
     display: block;
-    box-sizing: border-box;
     width: 100%;
     height: 100%;
 }
+

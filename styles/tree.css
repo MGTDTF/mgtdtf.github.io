@@ -223,7 +223,7 @@ td.data {
 .obj {
   font-size:14pt;
 }
-h1{
+/* h1{
         width:760px;
         color:#FFFFFF;
         background-color:#66CCFF;
@@ -231,7 +231,7 @@ h1{
 }
 hr{
         width:760px;
-}
+} */
 .MenuArea{
         text-align:left;
         margin-left:0px;
@@ -298,27 +298,5 @@ img.treeimg {
   height: 13px;
 }
 
-/* Mobile first: hide the menu initially */
-#Ttree2, #Ttree {
-  /* display: none; */
-}
 
-/* Hamburger menu styles */
-.hamburger {
-  display: block;
-  font-size: 30px;
-  cursor: pointer;
-  padding: 10px;
-}
-
-/* Show the menu on larger screens */
-@media (min-width: 768px) {
-  #Ttree2, #Ttree {
-    display: block;
-  }
-
-  .hamburger {
-    display: none; /* Hide hamburger icon on larger screens */
-  }
-}
 
