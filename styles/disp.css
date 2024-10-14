@@ -107,7 +107,7 @@ font.wait{
 
 /* #pdf > img { width: 100%; } */
 
-.pdf img {
+#pdf > img {
   width: 100%;
   height: auto;
 }
