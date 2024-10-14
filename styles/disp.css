@@ -107,8 +107,7 @@ font.wait{
 
 /* #pdf > img { width: 100%; } */
 
-.pdf {
-  width: 100%; 
-  max-width: 100%; 
-  /* overflow-x: hidden; */
+.pdf img {
+  width: 100%;
+  height: auto;
 }
