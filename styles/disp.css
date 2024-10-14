@@ -110,5 +110,5 @@ font.wait{
 .pdf {
   width: 100%; /* Ensure this is set correctly */
   max-width: 100%; /* Prevent overflow */
-  overflow: hidden; /* Avoid overflow issues */
+  overflow-x: hidden;
 }
