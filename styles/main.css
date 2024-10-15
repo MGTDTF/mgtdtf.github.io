@@ -128,3 +128,6 @@ span.homebody {
     font-family:Arial;
     font-size: small;
 }
+
+#toggleViewButton { background-color: palegreen;}
+#toggleViewButton.on {background-color: paleturquoise;}

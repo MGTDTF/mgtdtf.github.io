@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 link.textContent = title; // Set the link text
                 link.onclick = function (event) {
                     event.preventDefault(); // Prevent the default link behavior
-                    loadPDF(url); // Call the function to load the PDF into the canvas
+                    getPDF(url); // Call the function to load the PDF into the canvas
                     toggleMenu();
                 };
 
@@ -83,6 +83,35 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => {
             console.error('Error loading XML:', error);
         });
+
+    let useNativeViewer = false; // Flag to check which viewer to use
+
+    toggleViewButton.addEventListener('click', () => {
+        useNativeViewer = !useNativeViewer; // Toggle the flag
+        const button = document.getElementById('toggleViewButton');
+        button.classList.toggle('on');
+    });
+
+    // Function to load PDF based on user preference
+    function getPDF(url) {
+        if (useNativeViewer) {
+            loadNativePDF(url); // Use native PDF viewer
+        } else {
+            loadPDF(url); // Use PDF.js
+        }
+    }
+    
+    function loadNativePDF(pdfPath) {
+        pdfContainer.innerHTML = ''; // Clear existing content
+        const iframe = document.createElement('iframe');
+        iframe.src = pdfPath; // Use the PDF URL
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        pdfContainer.appendChild(iframe); // Add the iframe to the container
+    }
+
+
+
 
     // PDF rendering and loading functions
     const loadPDF = (url) => {
