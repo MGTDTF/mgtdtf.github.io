@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const pdfContainer = document.getElementById('pdf-container');
 
     // Load the XML file and generate the menu
-    fetch('/xml/PDF.xml')
+    fetch('/xml/pdf.xml')
         .then(response => response.text())
         .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
         .then(data => {
