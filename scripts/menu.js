@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const pdfContainer = document.getElementById('pdf-container');
+    const pdfNative = document.getElementById('pdf-native');
+    const pdfJs = document.getElementById('pdf-js');
+    const homepage = document.getElementById('homepage-container');
+    let currentPdfUrl = null;  // Variable to store the current PDF URL
 
     // Load the XML file and generate the menu
     fetch('/xml/pdf.xml')
@@ -17,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 link.textContent = title; // Set the link text
                 link.onclick = function (event) {
                     event.preventDefault(); // Prevent the default link behavior
+                    currentPdfUrl = url; // Store the current PDF URL
                     getPDF(url); // Call the function to load the PDF into the canvas
                     toggleMenu();
                 };
@@ -24,6 +29,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 menuItem.appendChild(link); // Append the link to the list item
                 return menuItem;
             };
+
+            // Add the "Home" menu item
+            const homeMenuItem = createMenuItem("Home", "home");
+            homeMenuItem.querySelector('a').onclick = function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                window.location.href = '/'; // Redirect to home page or reload
+            };
+            menuList.appendChild(homeMenuItem); // Add the "Home" item at the top of the menu
+
 
             // Function to create the expandable menu
             const createMenu = (menuElement) => {
@@ -88,84 +102,106 @@ document.addEventListener("DOMContentLoaded", function() {
 
     toggleViewButton.addEventListener('click', () => {
         useNativeViewer = !useNativeViewer; // Toggle the flag
-        const button = document.getElementById('toggleViewButton');
-        button.classList.toggle('on');
+        button = document.getElementById('toggleViewButton');
+        button.classList.toggle('nativePdfViewer');
+        // document.getElementById('pdf-container').classList.toggle('nativePdfViewer');
+        if (useNativeViewer) {
+            button.textContent = "Switch to PDF.js View"; // Change label
+        } else {
+            button.textContent = "Switch to Native PDF View"; // Change label
+        }
+
+        console.debug("current PDF url: ", currentPdfUrl);
+        // Reload the current PDF in the new viewer
+        if (currentPdfUrl) {
+            currentPage = 1;
+            getPDF(currentPdfUrl); // Reload the current PDF without needing to go back to the home screen
+        }
     });
 
     // Function to load PDF based on user preference
     function getPDF(url) {
+        console.debug("getPDF url: ", url);
+        currentPdfUrl = url; // Store the PDF URL globally
+        pdfContainer.style.display = 'block';
         if (useNativeViewer) {
+            pdfNative.style.display = 'block';
+            pdfJs.style.display = 'none';
             loadNativePDF(url); // Use native PDF viewer
         } else {
+            pdfNative.style.display = 'none';
+            pdfJs.style.display = 'block';
             loadPDF(url); // Use PDF.js
         }
     }
     
     function loadNativePDF(pdfPath) {
-        pdfContainer.innerHTML = ''; // Clear existing content
+        if (homepage) {
+            homepage.style.display = "none"; // Hide the element
+        }
+        pdfNative.innerHTML = '';
         const iframe = document.createElement('iframe');
         iframe.src = pdfPath; // Use the PDF URL
         iframe.style.width = '100%';
         iframe.style.height = '100%';
-        pdfContainer.appendChild(iframe); // Add the iframe to the container
+        pdfNative.appendChild(iframe); // Add the iframe to the container
     }
 
 
 
 
     // PDF rendering and loading functions
-    const loadPDF = (url) => {
-        pdfjsLib.getDocument(url).promise.then((pdfDoc) => {
-            const totalPages = pdfDoc.numPages;
-
-            console.debug(url);
-            console.debug(totalPages);
-
-            // Clear the pdfContainer before loading a new PDF
-            pdfContainer.innerHTML = ''; // Clear previous pages
-
-            // Render each page
-            for (let i = 1; i <= totalPages; i++) {
-                renderPage(i, pdfDoc); // Pass pdfDoc to renderPage
+    let pdfDoc = null;
+    let currentPage = 1;
+    let isRendering = false;
+    let canvas = document.getElementById('pdf-canvas');
+    let ctx = canvas.getContext('2d');
+    
+    // Load the PDF
+    function loadPDF(url) {
+        pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
+            if (homepage) {
+                homepage.style.display = "none"; // Hide the element
             }
-        }).catch(error => {
-            console.error('Error loading PDF:', error);
+            pdfDoc = pdfDoc_;
+            document.getElementById('page-info').textContent = `Page ${currentPage} of ${pdfDoc.numPages}`;
+            renderPage(currentPage); // Render the first page
         });
-    };
-
-    const renderPage = (num, pdfDoc) => { // Add pdfDoc as a parameter
-        pdfDoc.getPage(num).then(page => {
-            // const scale = pdfContainer.clientWidth / page.getViewport({ scale: 1 }).width; // Calculate scale based on container width
-            const scale = 1;
-            const viewport = page.getViewport({ scale: scale });
-
-            // Create a new canvas for this page
-            const pdfCanvas = document.createElement('canvas');
-            const context = pdfCanvas.getContext('2d');
-
-            // Set the canvas width to 100% of the container
-            pdfCanvas.style.width = '100%';
-            pdfCanvas.width = viewport.width; // Set the actual width to viewport width for proper rendering
-            pdfCanvas.height = viewport.height; // Set the height according to the viewport height
-
-            // Clear the canvas context before rendering
-            context.clearRect(0, 0, pdfCanvas.width, pdfCanvas.height);
-
-            // Set the render context
-            const renderContext = {
-                canvasContext: context,
+    }
+    
+    // Render a page
+    function renderPage(pageNumber) {
+        isRendering = true; // Prevent multiple renders at once
+        pdfDoc.getPage(pageNumber).then(function (page) {
+            let viewport = page.getViewport({ scale: 1.5 }); // Adjust scale as needed
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+    
+            let renderContext = {
+                canvasContext: ctx,
                 viewport: viewport
             };
-
-            // Render the page
-            page.render(renderContext).promise.then(() => {
-                // After rendering, append the canvas to the container
-                pdfContainer.appendChild(pdfCanvas);
-            }).catch(error => {
-                console.error('Error rendering page:', error);
+    
+            page.render(renderContext).promise.then(function () {
+                isRendering = false; // Mark rendering as complete
+                document.getElementById('page-info').textContent = `Page ${currentPage} of ${pdfDoc.numPages}`;
             });
-        }).catch(error => {
-            console.error('Error getting page:', error);
         });
-    };
+    }
+    
+    // Previous page navigation
+    document.getElementById('prev-page').addEventListener('click', function () {
+        if (currentPage > 1 && !isRendering) {
+            currentPage--;
+            renderPage(currentPage);
+        }
+    });
+    
+    // Next page navigation
+    document.getElementById('next-page').addEventListener('click', function () {
+        if (currentPage < pdfDoc.numPages && !isRendering) {
+            currentPage++;
+            renderPage(currentPage);
+        }
+    });    
 });

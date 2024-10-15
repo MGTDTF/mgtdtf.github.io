@@ -38,7 +38,7 @@
     <div id="header">
       <div class="hamburger" onclick="toggleMenu()">☰</div>
       <img id="reloadImage" src="/images/MG_safetyfast.png" alt="Logo" class="logo">
-      <button id="toggleViewButton">Toggle PDF View</button>
+      <button id="toggleViewButton">switch to native pdf viewer</button>
     </div>
   
     <div class="container">
@@ -46,44 +46,60 @@
       <!-- Menu column, hidden by default on smaller screens -->
       <aside id="menu" class="menu">
       </aside>
-  
-      <!-- PDF display area -->
-      <div id="pdf-container" style="overflow-y: auto; height: 100vh;">
-        <div id="homepage-container"> 
-          <div id="homepage">
-            <span class="homeheading">
-              <b><p>MG TD/TF</p></b>
-              <p><b>Workshop Manual</b></p>
-            </span>
+
+      <!-- homepage content area -->
+      <div id="homepage-container"> 
+        <div id="homepage">
+          <span class="homeheading">
+            <b><p>MG TD/TF</p></b>
+            <p><b>Workshop Manual</b></p>
+          </span>
+    
+          <span id="homebody">
+            <p>Applicable Models:</p>
+            <p>
+              TD</br>
+              TF 1250</br>
+              TF 1500</br>
+            </p>
       
-            <span id="homebody">
-              <p>Applicable Models:</p>
-              <p>
-                TD</br>
-                TF 1250</br>
-                TF 1500</br>
-              </p>
-        
-              <BR>
-              <p>Click the desired item from the pull down menu on the left.
-              Please wait until the pull down menu is displayed.</p>
-        
-              <p>Viewing the contents requires an Internet browser that supports HTML5.</p>
-              
-              <p>This is an online version of my personal workshop manual
-              and I lend it to you, much like a library does. 
-              It is not for copy or download.</p>
-              
-              <p>If you have a copy of any missing pages or additional information to add, 
-                you can send them to <a href="mailto:TF@miplace.com">TF@miplace.com</a> and I will update 
-                the website.</p>
-            </span>
-          </div>
+            <BR>
+            <p>Click the desired item from the pull down menu on the left.
+            Please wait until the pull down menu is displayed.</p>
+      
+            <p>Viewing the contents requires an Internet browser that supports HTML5.</p>
+            
+            <p>This is an online version of my personal workshop manual
+            and I lend it to you, much like a library does. 
+            It is not for copy or download.</p>
+            
+            <p>If you have a copy of any missing pages or additional information to add, 
+              you can send them to <a href="mailto:TF@miplace.com">TF@miplace.com</a> and I will update 
+              the website.</p>
+          </span>
+        </div>
+      </div>
+
+      <!-- PDF display area -->
+      <div id="pdf-container" style="display: none;">
+
+        <div id="pdf-native" style="display: none; overflow-y: auto; height: 100vh;">
+          <!-- container for the browser native pdf viewer -->
         </div>
 
-        <canvas id="pdf-canvas">         
-        </canvas>
+        <div id="pdf-js" style="display: none; overflow-y: auto; height: 100vh;">
+          <div id="pdf-navigation">
+            <button id="prev-page">Previous</button>
+            <span id="page-info">Page 1 of N</span>
+            <button id="next-page">Next</button>
+          </div>
+          <canvas id="pdf-canvas">
+            <!-- container for pdf.js -->
+          </canvas>
+        </div>
       </div>
+
+
   
     </div>
 

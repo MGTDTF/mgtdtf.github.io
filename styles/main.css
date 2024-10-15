@@ -129,5 +129,6 @@ span.homebody {
     font-size: small;
 }
 
-#toggleViewButton { background-color: palegreen;}
-#toggleViewButton.on {background-color: paleturquoise;}
+#toggleViewButton { background-color: palegreen; content: "Switch to native PDF View" }
+#toggleViewButton.nativePdfViewer {background-color: paleturquoise; content: "Switch to PDF.js View"} 
+/* #pdf-container.nativePdfViewer  {display: none; } */
