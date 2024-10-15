@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const renderPage = (num, pdfDoc) => { // Add pdfDoc as a parameter
         pdfDoc.getPage(num).then(page => {
             // const scale = pdfContainer.clientWidth / page.getViewport({ scale: 1 }).width; // Calculate scale based on container width
-            const scale = 2;
+            const scale = 1;
             const viewport = page.getViewport({ scale: scale });
 
             // Create a new canvas for this page
