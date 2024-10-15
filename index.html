@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title id="title">MG TD/TF Workshop Manual</title>
   <meta name="description" content="MG TD TF Workshop Manual">
   <link rel="canonical" href="https://mgtdtf.github.io/index.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
 
   <!-- Define the site name for google search -->
   <script type="application/ld+json">
@@ -21,56 +21,70 @@
   <!-- google search console tag -->
   <meta name="google-site-verification" content="HG0I24LLsD9MLX-ucKbr8EiWUJ6tTqBSJECgx0SGKV4" />
 
+  <!-- pdf.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script>
 
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta http-equiv="Pragma" content="no-cache">
 
   <link rel=stylesheet href="/styles/main.css">
-  <!-- <link rel=stylesheet href="/styles/_menu.css">
-  <link rel=stylesheet href="/styles/_pdf.css"> -->
-  <script src="/scripts/xml.js"></script>
-  <script src="/scripts/button.js"></script>
+
   <script src="/scripts/index.js"></script>
-  <!-- <script src="/scripts/_pdf.js"></script>
-  <script src="/scripts/_menu.js"></script> -->
+  <script src="/scripts/menu.js"></script>
 
 </head>
 
 <body>
-  <div class="container" id="mainContainer">
-    <div class="content-header">
+    <!-- Header with hamburger menu -->
+    <div id="header">
       <div class="hamburger" onclick="toggleMenu()">☰</div>
-      <img id="reloadImage" src="/images/MG_safetyfast.png" alt="Safety Fast">
+      <img id="reloadImage" src="/images/MG_safetyfast.png" alt="Logo" class="logo">
     </div>
-    <div class="content-wrapper">
-      <div id="nav">
-        <iframe name="menu_tree" id="menu_tree" src="/components/menu_tree.html"></iframe> 
+  
+    <div class="container">
+  
+      <!-- Menu column, hidden by default on smaller screens -->
+      <aside id="menu" class="menu">
+      </aside>
+  
+      <!-- PDF display area -->
+      <div id="pdf-container" style="overflow-y: auto; height: 100vh;">
+        <div id="homepage-container"> 
+          <div id="homepage">
+            <span class="homeheading">
+              <b><p>MG TD/TF</p></b>
+              <p><b>Workshop Manual</b></p>
+            </span>
+      
+            <span id="homebody">
+              <p>Applicable Models:</p>
+              <p>
+                TD</br>
+                TF 1250</br>
+                TF 1500</br>
+              </p>
+        
+              <BR>
+              <p>Click the desired item from the pull down menu on the left.
+              Please wait until the pull down menu is displayed.</p>
+        
+              <p>Viewing the contents requires an Internet browser that supports HTML5.</p>
+              
+              <p>This is an online version of my personal workshop manual
+              and I lend it to you, much like a library does. 
+              It is not for copy or download.</p>
+              
+              <p>If you have a copy of any missing pages or additional information to add, 
+                you can send them to <a href="mailto:TF@miplace.com">TF@miplace.com</a> and I will update 
+                the website.</p>
+            </span>
+          </div>
+        </div>
+
+        <canvas id="pdf-canvas">         
+        </canvas>
       </div>
-      <div id="content">
-        <iframe name="pdf" id="pdf" src="/components/pdf.html" style="width: 100%; height: 100vh;"></iframe>
-      </div>
+  
     </div>
-  </div>
 
-    <!-- <div id="nav"> -->
-      <!-- <iframe src="/components/menu_top.html" style="grid-area:menuTop" scrolling="no"></iframe> -->
-      <!-- <iframe name="menu_tree" id="menu_tree" src="/components/menu_tree.html" style="grid-area:menuTree"></iframe>  -->
-      <!-- <iframe name="menu_search" id="menu_search" src="/components/menu_search.html" style="grid-area:menuSearch"></iframe>   -->
-      <!-- <div id="menuTop" style="grid-area:menuTop"></div> -->
-      <!-- <div id="menu_tree" style="grid-area:menuTree"></div> -->
-      <!-- <div id="menuSearch" style="grid-area:menuSearch"></div> -->
-    <!-- </div> -->
-
-    <!-- <div id="content"> -->
-      <!-- <iframe src="/components/top.html" style="grid-area:pdfTop"></iframe> -->
-      <!-- <iframe name="pdf" id="pdf" src="/components/pdf.html" style="grid-area:pdf"></iframe> -->
-      <!-- <iframe name="frameopen" id="frameopen" src="/components/frameopen.html" style="display:none"></iframe> -->
-      <!-- <iframe name="frameopen" id="frameopen" src="/components/frameopen.html"></iframe> -->
-      <!-- <div id="pdfTop" style="grid-area:pdfTop"></div> -->
-      <!-- <div id="pdfContent" style="grid-area:pdf;"></div> -->
-      <!-- <div id="pdfBottom" style="display:none"></div> -->
-    <!-- </div> -->
-
-  <!-- </div> -->
 </body>
 </html>

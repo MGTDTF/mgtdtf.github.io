@@ -1,27 +1,12 @@
-* {
-    box-sizing: border-box;
-}
 
-html, body {
+* { box-sizing: border-box; }
+
+body {
     margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+    font-family: Arial, sans-serif;
 }
 
-.container {
-    display: flex;
-    flex-direction: column; /* Stack header on top of the iframes */
-    height: 100vh; /* Full height */
-    /* width: 100vw;
-    height: 100vh;
-
-    /* display: grid;
-    grid-template-columns: 300px auto; */
-}
-
-/* Header stays at the top with full width */
-.content-header {
+#header {
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -32,122 +17,114 @@ html, body {
     background-color: #f0f0f0;
 }
 
-.content-header > img { cursor: pointer; }
-
-/* Wrapper for nav and content to position them side by side */
-.content-wrapper {
-  display: flex;
-  flex: 1; /* Makes the wrapper take up remaining space below the header */
-}
-
-#nav {
-    max-width: 220px;
-    /* width: 100%; */
-    height: 100%;
-/* 
-    grid-template-rows: 33px auto;
-
-    grid-template-areas:
-        "menuTop"
-        "menuTree"; */
-        /* "menuSearch"; */
-}
-
-#content {
+.container {
+    display: flex;
     width: 100%;
-    height: 100%;
-/* 
-    display: grid;
-    grid-template-rows: 33px auto;
-
-    grid-template-areas:
-        "pdfTop"
-        "pdf"; */
 }
 
-/* #frameopen { display: none; }; */
-/* allows javascript to toggle menu display */
 
-#nav.closed { display: none; }
-/* #content.full-width { grid-column: 1 / span 2; } */
-/* #pdf.full-width { grid-row: 2 / span 1; } */
-/* #frameopen.full-width { display: block; }; */
-
-/* set the default to mobile with hamburger menu */
-/* #nav { display: none; } */
-/* #content { grid-column: 1 / span 2; } */
-/* #pdf { grid-row: 2 / span 1; } */
-/* #frameopen { display: block; } */
-
-@media (min-width: 768px) {
-    /* display the menu tree on larger screens. same as frameopen() */
-    #nav {display: inline-block; }
-
-    /* #nav { display: grid; } */
-    /* #content { grid-column: 2 / span 1; } */
-    /* #pdf { grid-area: pdf; } */
-    /* #frameopen { display: none; } */
-}
-
-/* Hamburger menu styles */
 .hamburger {
-    display: block;
-    font-size: 20px;
+    display: inline-block;
     cursor: pointer;
-    padding: 0 10px;
+    padding-left: 20px;
+    font-size: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
     align-content: center;
 }
 
-@media (max-width: 767px) {
-    #nav { display: inline-block; };
+#reloadImage { cursor: pointer; }
+
+/* Menu styling */
+aside {
+    width: 300px;
+    background-color: #f4f4f4;
+    height: 100%;
+    /* position: fixed;
+    left: -250px;
+    top: 0;
+    overflow-y: auto;
+    transition: left 0.3s; */
 }
 
-.homepage {
-    /* width: 100%;
-    height: 100%; */
-    margin: 20px;
-    /* padding: 10px; */
+/* Menu for larger screens */
+@media (min-width: 768px) {
+    aside { left: 0; }
 }
+
+aside ul {
+    padding-top: 5px;
+    padding-left: 13px;
+}
+
+aside a {
+    padding: 0 12px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+}
+
+#pdf-container {
+    width: 100%;
+    height: auto;
+}
+
+#pdfCanvas {
+    width: 100%;
+}
+
+
+#menu {
+    display: none; /* Hide by default */
+}
+
+#menu.open {
+    display: block; /* Show when active */
+} 
 
 @media (min-width: 768px) {
-    .homepage { width: 50%; }
-    body.bg01 {
+    /* main {margin-left: 250px;} */
+    #menu {display: block; };
+}
+
+aside ul {
+    list-style-type: none; /* Remove bullets */
+    padding-left: 0; /* Remove default padding */
+}
+
+aside li {
+    margin: 0; /* Remove margin for list items */
+    padding-left: 12px;
+    padding-bottom: 5px;
+    font-size: 0.9em;
+}
+
+#homepage-container { margin: 20px; }
+
+@media (min-width: 768px) {
+    .hamburger { display: none; }
+    #reloadImage { padding-left: 30px; }
+    #homepage { width: 50%; }
+    #homepage-container {
         background-image: url(/images/MG_TF1500.gif); 
         background-repeat: no-repeat;
         background-position: right bottom;
-        background-size: 40% auto;
+        background-size: 30vw auto;
         background-blend-mode: dark;
         background-position:right top;
-      }
+        height: 100%;
+    }
 }
 
-
-.popupContainer {
-    width: 100vw;
-    height: 100vh;
-
-    display: grid;
-    grid-template-columns: 300px auto;
-    grid-template-rows: auto;
+span.homeheading {
+    color: #de0000;
+    font-family:Arial;
+    font-size: large;
 }
 
-.ewdContainer {
-    width: 100%;
-    height: 100%;
-
-    display: grid;
-    grid-template-rows: 33px auto;
-
-    grid-template-areas:
-        "controls"
-        "pdf";
+span.homebody {
+    color: #000000;
+    font-family:Arial;
+    font-size: small;
 }
-
-iframe {
-    border: none;
-    outline: none;
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
