@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic SU Needle Comparison Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+    <link rel="stylesheet" href="/su_carbs/html/needles.css">
+</head>
+<body>
+    <h1>SU Needle Comparison</h1>
+    <div class="controls">
+        <div>
+            <div class="select-all">
+                <input type="checkbox" id="selectAll">
+                <label for="selectAll">Select All Needles</label>
+            </div>
+            <div class="needle-list" id="needleList">
+                <!-- Needles will be populated here -->
+            </div>
+        </div>
+    </div>
+    <canvas id="chart"></canvas>
+    <script src="/su_carbs/html/needles.js"></script>
+</body>
+</html> 

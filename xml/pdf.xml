@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <pdf>
 		<menu>
+			<title>My MGs</title>
+			<item><title>TF9094</title><url>https://mgtf1500.tumblr.com/tagged/intro/chrono</url></item>
+			<item><title>TF8955</title><url>/images/TF9855.pdf</url></item>
+		</menu>
+		<menu>
+			<title>SU Carb tuning and needles</title>
+			<item><title>SU Needle Charts</title><url>/su_carbs/html/needles.html</url></item>
+			<item><title>SU idiot guide</title><url>/su_carbs/pdf/SU idiot guide.pdf</url></item>
+			<item><title>H type Tuning</title><url>/su_carbs/pdf/Type-H-Carburetters-Tuning-Servicing.pdf</url></item>
+			<item><title>SU Workshop Manual</title><url>/su_carbs/pdf/SU-Carburreter-Workshop-Manual.pdf</url></item>
+			<item><title>David Braun guide</title><url>/su_carbs/pdf/SU Carburetor tuning gen rev d 161127.pdf</url></item>
+			<item><title>SU Tuning</title><url>/su_carbs/pdf/Tuning_SU_Carburetors.pdf</url></item>
+		</menu>
+		<menu>
+			<title>Lucas Distributor info</title>
+			<item><title>Lucas Distributor List</title><url>/distributor/pdf/Distributor list LUCAS.pdf</url></item>
+			<item><title>Lucas Workshop Manual</title><url>/distributor/pdf/dkydistributor.pdf</url></item>
+			<item><title>More Lucas Disti info</title><url>/distributor/pdf/LUCAS  Distributors and Contact Breaker Units.PDF</url></item>
+			<item><title>Lucas Technical Serice</title><url>/distributor/pdf/Lucas-technical-session-3-Ignition.pdf</url></item>
+		</menu>
+		<menu>
 			<title>General Data</title><color>1</color>
 			<item><title>Series TD - Data</title><url>/pdf/General/G4.pdf</url></item>
 			<item><title>Series TD - Information</title><url>/pdf/General/G8.pdf</url></item>

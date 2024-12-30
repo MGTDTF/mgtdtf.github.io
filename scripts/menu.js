@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const pdfJs = document.getElementById('pdf-js');
     const homepage = document.getElementById('homepage-container');
     let currentPdfUrl = null;  // Variable to store the current PDF URL
+    let useNativeViewer = false; // Toggle for viewer type
 
     // Load the XML file and generate the menu
     fetch('/xml/pdf.xml')
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 link.onclick = function (event) {
                     event.preventDefault(); // Prevent the default link behavior
                     currentPdfUrl = url; // Store the current PDF URL
-                    getPDF(url); // Call the function to load the PDF into the canvas
+                    loadFile(url);
                     toggleMenu();
                 };
 
@@ -98,53 +99,109 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('Error loading XML:', error);
         });
 
-    let useNativeViewer = false; // Flag to check which viewer to use
-
+    // Toggle PDF viewer type
+    const toggleViewButton = document.getElementById('toggleViewButton');
     toggleViewButton.addEventListener('click', () => {
-        useNativeViewer = !useNativeViewer; // Toggle the flag
-        button = document.getElementById('toggleViewButton');
-        button.classList.toggle('nativePdfViewer');
-        // document.getElementById('pdf-container').classList.toggle('nativePdfViewer');
-        if (useNativeViewer) {
-            button.textContent = "Switch to PDF.js View"; // Change label
-        } else {
-            button.textContent = "Switch to Native PDF View"; // Change label
-        }
-
-        console.debug("current PDF url: ", currentPdfUrl);
-        // Reload the current PDF in the new viewer
+        useNativeViewer = !useNativeViewer;
+        toggleViewButton.classList.toggle('nativePdfViewer');
+        toggleViewButton.textContent = useNativeViewer ? "Switch to PDF.js View" : "Switch to Native PDF View";
         if (currentPdfUrl) {
-            currentPage = 1;
-            getPDF(currentPdfUrl); // Reload the current PDF without needing to go back to the home screen
+            loadPdfContent(currentPdfUrl);
         }
     });
 
-    // Function to load PDF based on user preference
-    function getPDF(url) {
-        console.debug("getPDF url: ", url);
-        currentPdfUrl = url; // Store the PDF URL globally
-        pdfContainer.style.display = 'block';
-        if (useNativeViewer) {
-            pdfNative.style.display = 'block';
-            pdfJs.style.display = 'none';
-            loadNativePDF(url); // Use native PDF viewer
+    // Centralized function to toggle visibility of containers
+    function toggleDisplay({ showHomepage = false, showPdfContainer = false, showPdfNative = false, showPdfJs = false }) {
+        homepage.style.display = showHomepage ? 'block' : 'none';
+        pdfContainer.style.display = showPdfContainer ? 'block' : 'none';
+        pdfNative.style.display = showPdfNative ? 'block' : 'none';
+        pdfJs.style.display = showPdfJs ? 'block' : 'none';
+    }
+
+    // Function to handle file loading
+    function loadFile(url) {
+        const fileExtension = url.split('.').pop().toLowerCase();
+    
+        // Check if the URL is an external website
+        if (url.startsWith('http://') || url.startsWith('https://')) {
+            window.open(url, '_blank'); // Open the website in a new tab
+        } else if (fileExtension === 'html') {
+            loadHtmlContent(url);
+        } else if (fileExtension === 'pdf') {
+            loadPdfContent(url);
         } else {
-            pdfNative.style.display = 'none';
-            pdfJs.style.display = 'block';
-            loadPDF(url); // Use PDF.js
+            console.error('Unsupported file type or URL:', url);
         }
     }
     
-    function loadNativePDF(pdfPath) {
-        if (homepage) {
-            homepage.style.display = "none"; // Hide the element
+
+
+
+    // Function to load HTML content
+    function loadHtmlContent(url) {
+        console.debug('Loading HTML file:', url);
+        fetch(url)
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                return response.text();
+            })
+            .then(htmlContent => {
+                homepage.innerHTML = htmlContent;
+                homepage.style.backgroundImage = 'none';
+                homepage.style.width = '100%';
+                console.log("about to execute scripts");
+                executeScripts(homepage);
+                toggleDisplay({ showHomepage: true });
+            })
+            .catch(error => console.error('Error loading HTML file:', error));
+    }
+
+    function hidePdfContainers() {
+        const pdfContainer = document.getElementById('pdf-container');
+        const pdfNative = document.getElementById('pdf-native');
+        const pdfJs = document.getElementById('pdf-js');
+
+        if (pdfContainer) pdfContainer.style.display = 'none';
+        if (pdfNative) pdfNative.style.display = 'none';
+        if (pdfJs) pdfJs.style.display = 'none';
+    }
+
+
+    // Function to execute scripts in loaded HTML
+    function executeScripts(element) {
+        const scripts = element.querySelectorAll('script');
+        scripts.forEach(script => {
+            const newScript = document.createElement('script');
+            if (script.src) {
+                newScript.src = script.src;
+            } else {
+                newScript.textContent = script.textContent;
+            }
+            document.body.appendChild(newScript);
+            script.remove();
+        });
+    }
+
+
+    // Function to load PDF content
+    function loadPdfContent(url) {
+        currentPdfUrl = url; // Store the URL globally
+        toggleDisplay({ showPdfContainer: true, showPdfNative: useNativeViewer, showPdfJs: !useNativeViewer });
+        if (useNativeViewer) {
+            loadNativePDF(url);
+        } else {
+            loadPDF(url);
         }
-        pdfNative.innerHTML = '';
+    }
+    
+    // Function to load native PDF
+    function loadNativePDF(pdfPath) {
+        pdfNative.innerHTML = ''; // Clear previous content
         const iframe = document.createElement('iframe');
-        iframe.src = pdfPath; // Use the PDF URL
+        iframe.src = pdfPath;
         iframe.style.width = '100%';
         iframe.style.height = '100%';
-        pdfNative.appendChild(iframe); // Add the iframe to the container
+        pdfNative.appendChild(iframe);
     }
 
 
@@ -189,19 +246,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     
-    // Previous page navigation
-    document.getElementById('prev-page').addEventListener('click', function () {
+    // Add navigation event listeners
+    document.getElementById('prev-page').addEventListener('click', () => {
         if (currentPage > 1 && !isRendering) {
             currentPage--;
             renderPage(currentPage);
         }
     });
-    
-    // Next page navigation
-    document.getElementById('next-page').addEventListener('click', function () {
+    document.getElementById('next-page').addEventListener('click', () => {
         if (currentPage < pdfDoc.numPages && !isRendering) {
             currentPage++;
             renderPage(currentPage);
         }
-    });    
+    }); 
 });
