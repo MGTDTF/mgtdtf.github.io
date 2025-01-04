@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const pdfContainer = document.getElementById('pdf-container');
     const pdfNative = document.getElementById('pdf-native');
-    const pdfJs = document.getElementById('pdf-js');
+    const pdfCanvas = document.getElementById('pdf-canvas');
+    const pdfNavigation = document.getElementById('pdf-navigation');
     const homepage = document.getElementById('homepage-container');
     const pdfToggleButton = document.getElementById('toggleViewButton');
     let currentPdfUrl = null;  // Variable to store the current PDF URL
@@ -124,7 +125,8 @@ document.addEventListener("DOMContentLoaded", function() {
         homepage.style.display = showHomepage ? 'block' : 'none';
         pdfContainer.style.display = showPdfContainer ? 'block' : 'none';
         pdfNative.style.display = showPdfNative ? 'block' : 'none';
-        pdfJs.style.display = showPdfJs ? 'block' : 'none';
+        pdfCanvas.style.display = showPdfJs ? 'block' : 'none';
+        pdfNavigation.style.display = showPdfJs ? 'block' : 'none'; 
         pdfToggleButton.style.display =showPdfContainer ? 'block' : 'none';
     }
 

@@ -29,8 +29,6 @@ body {
     padding-left: 20px;
     font-size: 30px;
     height: 3px;
-    background-color: white;
-    margin: 4px 0;
     align-content: center;
 }
 
@@ -66,12 +64,15 @@ aside a {
 }
 
 #pdf-container {
+    position: relative;
     width: 100%;
     height: auto;
 }
 
-#pdfCanvas {
+canvas#pdf-canvas {
     width: 100%;
+    /* position: relative;
+    z-index: -1; */
 }
 
 
@@ -132,11 +133,13 @@ span.homebody {
 #toggleViewButton { background-color: palegreen; }
 #toggleViewButton.nativePdfViewer {background-color: paleturquoise; } 
 /* #pdf-container.nativePdfViewer  {display: none; } */
-#pdf-container { position: relative; }
+
+/* #pdf-js { position: relative; } */
 #pdf-navigation {
-    position: absolute;
-    top: 0; /* Adjust as needed */
+    position: sticky;
+    background-color: white;
+    top: 10px;
     left: 0;
-    right: 0; /* Adjust as needed */
+    right: 0;
     z-index: 1000; /* Ensure it stays above other elements */
 }
