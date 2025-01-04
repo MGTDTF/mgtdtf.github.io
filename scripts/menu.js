@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const pdfNative = document.getElementById('pdf-native');
     const pdfJs = document.getElementById('pdf-js');
     const homepage = document.getElementById('homepage-container');
+    const pdfToggleButton = document.getElementById('toggleViewButton');
     let currentPdfUrl = null;  // Variable to store the current PDF URL
-    let useNativeViewer = false; // Toggle for viewer type
+    // Initialize useNativeViewer based on screen size
+    let useNativeViewer = window.matchMedia("(min-width: 768px)").matches;
+
 
     // Load the XML file and generate the menu
     fetch('/xml/pdf.xml')
@@ -99,8 +102,14 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('Error loading XML:', error);
         });
 
+    // Add event listener for window resize to update useNativeViewer
+    window.addEventListener('resize', () => {
+        useNativeViewer = window.matchMedia("(min-width: 768px)").matches;
+    });
+
     // Toggle PDF viewer type
     const toggleViewButton = document.getElementById('toggleViewButton');
+    toggleViewButton.textContent = useNativeViewer ? "Switch to PDF.js View" : "Switch to Native PDF View";
     toggleViewButton.addEventListener('click', () => {
         useNativeViewer = !useNativeViewer;
         toggleViewButton.classList.toggle('nativePdfViewer');
@@ -116,6 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
         pdfContainer.style.display = showPdfContainer ? 'block' : 'none';
         pdfNative.style.display = showPdfNative ? 'block' : 'none';
         pdfJs.style.display = showPdfJs ? 'block' : 'none';
+        pdfToggleButton.style.display =showPdfContainer ? 'block' : 'none';
     }
 
     // Function to handle file loading
